@@ -1,0 +1,23 @@
+<!doctype html>
+  <head>
+    <title>Simple Inventory Invoice Management</title>
+    <link rel="stylesheet" href="/forms-angular/dist/forms-angular-with-bs3.css" />
+  </head>
+  <body ng-app="app" ng-controller="NavCtrl" ng-keyup="globalShortcuts($event)" style="padding-top: 60px;">
+
+    <div ng-include="'/navbar.html'"></div>
+    <div ng-view></div>
+
+    <script src="/angular/angular.js"></script>
+    <script src="/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/angular-messages/angular-messages.js"></script>
+    <script src="/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="/underscore/underscore.js"></script>
+    <script src="/ng-infinite-scroll/build/ng-infinite-scroll.js"></script>
+    <script src="/angular-elastic/elastic.js"></script>
+    <script src="/forms-angular/dist/forms-angular.js"></script>
+    <script src="/angular-route/angular-route.js"></script>
+    <script src="/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>

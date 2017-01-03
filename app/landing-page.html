@@ -1,0 +1,55 @@
+<div class="row" ng-controller="MainController">
+    <div class="col-md-10 col-md-offset-1">
+        <p>Create New:</p>
+        <ul>
+            <li><a href="/#/Inventory/new">Inventory</a></li>
+            <li><a href="/#/Invoice/new">Invoice </a></li>
+        </ul>
+
+        <div>
+           	<ul class="nav nav-pills">
+                <li role="presentation" ng-class="{active: invoices.length > 0}"><a ng-click="get_invoices()">List Invoices</a></li>
+    	        <li role="presentation" ng-class="{active: inventories.length > 0}"><a ng-click="get_inventories()">List Inventories</a></li>
+
+          	</ul>
+        </div>
+        <hr/>
+
+
+    	<div ng-show="inventories.length > 0">
+	        <h4>Inventories</h4>
+            <table class="table table-striped">
+                <tr>
+                    <th>Inventory</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                </tr>
+                <tr ng-repeat="inventory in inventories">
+                    <td><a target="_blank" href="/#/Inventory/{{inventory._id}}/edit">{{inventory.name}}</a></td>
+                    <td>{{inventory.price | currency}}</td>
+                    <td>{{inventory.stock}}</td>
+                </tr>
+            </table>
+    	</div>
+        <div ng-show="invoices.length > 0">
+            <h4>Invoices</h4>
+            <table class="table table-striped">
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+                <tr ng-repeat="invoice in invoices">
+                    <td><a target="_blank" href="/#/Invoice/{{invoice._id}}/edit">{{invoice.name}}</a></td>
+                    <td>{{invoice.created |  date:'medium'}}</td>
+                    <td>
+                        <span ng-class="label(invoice.status)">{{invoice.status}}</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+

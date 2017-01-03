@@ -1,0 +1,17 @@
+{
+  "name": "simple-inventory-invoice-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular-route": "^1.6.1",
+    "angular-ui-router": "^0.3.2",
+    "forms-angular": "^0.7.1",
+    "json2xls": "^0.1.2"
+  }
+}
